@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./overlays.css">
+    <link rel="stylesheet" href="./game.css">
+    <script src="./index.js" defer></script>
+    <script src="./game.js" defer></script>
+    <script src="jquery-3.6.0.min.js" defer></script>
+
+</head>
+<body>
+    <div id="backdrop"></div>
+
+    <header>
+        <h1>Play Tic Tac Toe</h1>
+        <p>Built with HTML, CSS, JS and lots of Love!</p>
+    </header>
+    <main>
+        <aside class="modal">
+            <h2>Enter your Name</h2>
+            <form action="">
+                <div>
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <p id="errormsg">Please enter a  vald name</p>
+                </div>
+                <div>
+                    <button type="button" class="btn-alt" id="modal-cancel">Cancel</button>
+                    <button type="submit" id="modal-confirm">Confirm</button>
+                </div>
+            </form>
+        </aside>
+        <section id="config">
+            <ol>
+                <li>
+                    <article>
+                        <h2>Player 1</h2>
+                        <h3>PLAYER NAME</h3>
+                        <P class="player-symbol">X</P>
+                        <button class="btn-alt" id="p1" data-pid = "1">Edit</button>
+                    </article>
+                </li>
+                <li>
+                    <article >
+                        <h2>Player 2</h2>
+                        <h3>PLAYER NAME</h3>
+                        <P class="player-symbol">O</P>
+                        <button class="btn-alt" id="p2" data-pid = "2">Edit</button>
+                    </article>
+                </li>
+            </ol>
+            <button id="start-game"><a href="">Start new game</a> </button>
+            <p id="start-err">Please enter your name</p>
+        </section>
+
+        <section id="field">
+            <article>
+                <h3 id="gameover">You won <span></span></h3>
+                <p>Click 'Start new game' to start a new game</p>
+            </article>
+
+            <p>Your Turn <span class="player-name">PLAYER NAME</span></p>
+            <ol id="game-board">
+                <li onmouseover="" data-row="1" data-col="1" ></li>
+                <li onmouseover="" data-row="1" data-col="2" ></li>
+                <li onmouseover="" data-row="1" data-col="3" ></li>
+                <li onmouseover="" data-row="2" data-col="1" ></li>
+                <li onmouseover="" data-row="2" data-col="2" ></li>
+                <li onmouseover="" data-row="2" data-col="3" ></li>
+                <li onmouseover="" data-row="3" data-col="1" ></li>
+                <li onmouseover="" data-row="3" data-col="2" ></li>
+                <li onmouseover="" data-row="3" data-col="3" ></li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
